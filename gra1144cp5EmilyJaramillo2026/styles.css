@@ -1,0 +1,33 @@
+.logo {
+    width: 200px;
+    margin: 10px;
+    height: 200px;
+    vertical-align: middle;
+}
+h1 {
+    display: inline;
+}
+body {
+    margin: 0;
+    background-color: #5BE4FF;
+    background-attachment: fixed;
+}
+nav a li {
+    padding: 20px;
+    display: inline-block;
+    background-color: #FDFDFD;
+}
+nav {
+    text-align: center;
+}
+nav a li:hover {
+    background-color: hotpink;
+}
+wrapper {
+    width: 1366px;
+    margin: auto;
+    display: block;
+}
+main {
+    height: 1000px;
+}
