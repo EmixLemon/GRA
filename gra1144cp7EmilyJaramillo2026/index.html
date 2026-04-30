@@ -2,16 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
 <title>Travel Japan | Emily Jaramillo, 2026</title>
 <script src="https://kit.fontawesome.com/281f5c001d.js" crossorigin="anonymous"></script>
 <style type="text/css">
 body {
-	margin: 0;
-	background-image: url(tokyo.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-color: rgba(114,201,229,1.00);
-	background-position: 0 100px;
+    margin: 0;
+    background-image: url(tokyo_night.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(14,84,233,1.00);
+    background-position: 0 100px;
 }
 wrapper {
 	width: 1366px;
@@ -19,8 +22,8 @@ wrapper {
 	display: block;
 }
 header {
-	height: 100px;
-	background-color: rgba(22,77,173,1.00);
+    height: 100px;
+    background-color: rgba(238,21,71,1.00);
 }
 #Tabs1 ul {
     border: none;
@@ -30,31 +33,108 @@ header {
 #Tabs1 {
     background-image: none;
     background-color: rgba(255,255,255,0.50);
+	
 }
 #Tabs1 ul li  {
     text-align: center;
+    background-image: none;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: rgba(15,84,233,1.00);
 }
 #Tabs1 ul li i {
     font-size: 20px;
     color: rgba(238,21,71,1.00);
 }
 #tabs-1 div{
+    display: grid;
+    grid-template-columns: 17% 17% 17% 17% 17% 10%;
+    gap: 10px;
+    background-image: none;
+	
+}
+#tabs-2 div{
+    display: grid;
+    grid-template-columns: 17% 17% 17% 17% 10%;
+    gap: 10px;
+    background-image: none;	
+}
+#tabs-3 div{
 	display: grid;
-	grid-template-columns: 17% 17% 17% 17% 17% 10%;
+	grid-template-columns: 12% 12% 12% 12% 12% 12% 10%;
+	gap: 10px;
+}
+#tabs-4 div{
+    display: grid;
+    grid-template-columns: 17% 17% 17% 17% 17% 10%;
+    gap: 10px;
+    background-image: none;	
+}
+#tabs-5 div{
+	display: grid;
+	grid-template-columns: 17% 17% 17% 10%;
 	gap: 10px;
 }
 .search {
     color: white;
-    background-color: rgba(238,21,71,1.00);
+    background-color: rgba(14,84,233,1.00);
 }
 h1 {
     padding: 20px;
     margin: 0px;
+	color: white;
+	font-family: "Sniglet", system-ui;
+    font-weight: 400;
+    font-style: normal;
+	font-size: 50px;
 }
 input, select {
     border-radius: 10px;
     border: none;
     padding: 10px;
+}
+.plane {
+    width: 99px;
+    height: 67px;
+    position: relative;
+    left: 361px;
+    top: -84px;
+}
+#Tabs1 a {
+    color: rgba(238,21,71,1.00);
+}
+p {
+    font-size: 25px;
+    color: white;
+    font-weight: bolder;
+}
+.disclaimer {
+    position: relative;
+    bottom: -641px;
+    font-size: 14px;
+}
+.air_japan {
+    position: static;
+    bottom: 0px;
+    width: 404px;
+    left: 33px;
+    border: 7px dashed rgba(255,255,255,1.00);
+    margin-left: 216px;
+	}
+.capsule {
+    width: 404px;
+    position: relative;
+    left: 55px;
+    border: 7px dashed rgba(255,255,255,1.00);
+}
+.car{
+    width: 404px;
+    position: relative;
+    left: 96px;
+    top: 0px;
+    height: 269px;
+    border: 7px dashed rgba(255,255,255,1.00);
 }
 </style>
 <link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
@@ -67,7 +147,8 @@ input, select {
 <body>
 <header>
   <wrapper>
-	<h1>Travel Japan</h1>
+	<h1>The Gaikokujin</h1>
+	<img src="paper_plane.png" class="plane"/>
   </wrapper>
 </header>
 <wrapper>
@@ -82,8 +163,8 @@ input, select {
     <div id="tabs-1">
       <p>Find your flights</p>
       <div>
-        <input type="text" placeholder="Leaving from">
-        <input type="text" placeholder="Going to">
+        <input type="text" placeholder="Leaving from...">
+        <input type="text" placeholder="Going to...">
         <input type="date">
         <input type="date">
         <select>
@@ -96,22 +177,71 @@ input, select {
           </select>
         <input type="submit" class="search" value="Search">
       </div>
-		
     </div>
     <div id="tabs-2">
       <p>Find your hotels</p>
+	  <div>
+        <input type="text" placeholder="Where to?">
+        <input type="date">
+        <input type="date">
+        <select>
+          <option value="0">Number of travelers</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          </select>
+        <input type="submit" class="search" value="Search">
+      </div> 
     </div>
     <div id="tabs-3">
       <p>Find your car rental</p>
+	  <div>
+        <input type="text" placeholder="Pick-up">
+        <input type="text" placeholder="Drop-off">
+        <input type="date">
+		<input type="date">
+		<input type="time">
+		<input type="time">
+        <input type="submit" class="search" value="Search">
+      </div>
     </div>
     <div id="tabs-4">
       <p>Bundle and save</p>
+	  <div>
+        <input type="text" placeholder="Leaving from...">
+        <input type="text" placeholder="Going to...">
+        <input type="date">
+        <input type="date">
+        <select>
+          <option value="0">Number of travelers</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          </select>
+        <input type="submit" class="search" value="Search">
+      </div>
     </div>
     <div id="tabs-5">
       <p>Find things to do</p>
+	  <div>
+        <input type="text" placeholder="Going to...">
+        <input type="date">
+        <input type="date">
+        <input type="submit" class="search" value="Search">
+      </div>
     </div>
   </div>
+<footer>
+	  <p class="disclaimer">&copy; 2026, Emily Jaramillo. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  </footer>
 </wrapper>
+<img src="air_japan.jpg" class="air_japan"/>
+<img src="capsule.jpeg" class="capsule"/>
+<img src="japan_car.jpg" class="car"/>
 <script type="text/javascript">
 $(function() {
 	$( "#Tabs1" ).tabs(); 
